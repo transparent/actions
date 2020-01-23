@@ -1,0 +1,22 @@
+{
+  "name": "actions",
+  "description": "Repository for running common actions.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/transparent/actions",
+  "author": "Brian Woodward (https://doowb.com)",
+  "repository": "transparent/actions",
+  "bugs": {
+    "url": "https://github.com/transparent/actions/issues"
+  },
+  "license": "MIT",
+  "files": [],
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "actions"
+  ]
+}
