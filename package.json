@@ -18,5 +18,11 @@
   },
   "keywords": [
     "actions"
-  ]
+  ],
+  "dependencies": {
+    "@octokit/graphql": "^4.3.1",
+    "composer": "^4.1.0",
+    "minimist": "^1.2.0",
+    "write": "^2.0.0"
+  }
 }
