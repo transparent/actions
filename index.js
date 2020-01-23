@@ -1,17 +1,14 @@
 'use strict';
 
 const Composer = require('composer');
-const argv = require('minimist')(process.argv.slice(2));
-const tasks = require('./lib/tasks');
-
 const composer = new Composer();
+const config = require('./lib/config');
+const tasks = require('./lib/tasks');
 const keys = Object.keys(tasks);
+const names = config._.length ? config._ : keys;
 
-for (let key of keys) {
-  composer.task(key, async () => {
-    const results = await tasks[key](argv);
-    console.log(results);
-  });
+for (const key of keys) {
+  composer.task(key, async () => console.log(await tasks[key](config)));
 }
 
-composer.build(argv._.length ? argv._ : ['default']);
+composer.build(names);
